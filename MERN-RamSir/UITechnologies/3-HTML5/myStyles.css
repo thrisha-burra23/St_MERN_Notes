@@ -1,0 +1,27 @@
+body, h1,h2,h3, li,ul{
+    margin: 5px;
+    padding: 5px;
+}
+
+body{
+    background-color: dimgrey;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a:link{
+    color: black ;
+}
+a:hover{
+    color: blueviolet;
+}
+header{
+    background-color: aquamarine;
+}
+
+section{
+    background-color: hotpink;
+}
+
+footer{
+    background-color: darkgreen;
+}

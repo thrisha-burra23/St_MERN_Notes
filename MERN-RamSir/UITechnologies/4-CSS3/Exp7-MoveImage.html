@@ -1,0 +1,23 @@
+ <html>
+    <head>
+        <title>Image Move - Animation </title>
+        <style>
+            .abc{
+                margin: 30px;
+                width:105px ;
+                height: 130px;
+                background: url(shared_globe.png)no-repeat;
+                position: relative;
+                animation: repeatit 2s linear 1ms infinite alternate;
+            }
+            @keyframes repeatit{
+                from{left: 0;}
+                to {left: 70%;}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="abc"></div><br> 
+  
+    </body>
+ </html>

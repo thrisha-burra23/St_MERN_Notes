@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Promises</title>
+    <script>
+        let myPromise = new Promise(function (resolve, reject) {
+
+            setTimeout(function(){
+                resolve("Data loaded after 2 seconds")
+            }, 2000)
+        });
+
+        myPromise
+            .then(function (result) {
+                console.log(result)
+            })
+            
+    </script>
+</head>
+
+</html>

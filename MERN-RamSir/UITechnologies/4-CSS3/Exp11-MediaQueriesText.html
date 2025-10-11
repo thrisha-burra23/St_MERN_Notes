@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Media Queries texxt</title>
+        <style>
+            .myData{
+                margin: 0 auto;
+                background-color: hsl(154, 94%, 37%);
+                box-sizing: border-box;
+            }
+            /* Smart Phones (portait and land scape) */
+            @media screen and (min-width:767) {
+                .myData{
+                    width: 100%;
+                    padding: 5px 10px;
+                }
+            }
+            /* Low resolutin desktops and Laptops */
+            @media screen and (min-width:768px) and (max-width:1024) {
+               .myData{
+                width: 750px;
+                padding: 5px 10px;
+               } 
+            }
+
+            /* high Resolution */
+             @media screen and (min-width:1280px)   {
+               .myData{
+                width: 1200px;
+                padding: 5px 10px;
+               } 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="myData">
+             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde voluptates illo 
+        velit vero corrupti laboriosam doloremque quis! Omnis rem neque aperiam facere 
+        autem, quidem quod quos odit dolorem. Eum, natus!
+        </div>        
+    </body>
+</html>

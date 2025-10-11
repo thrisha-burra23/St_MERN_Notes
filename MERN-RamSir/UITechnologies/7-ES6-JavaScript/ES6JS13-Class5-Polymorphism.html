@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title> ES6-Polymorphism</title>
+</head>
+
+<body>
+    <h1>JS ES6-Ploymorphism</h1>
+    <script>
+        class Animal {  
+            sound() {
+                return "Some generic Sound";
+            }
+        }
+
+        class Dog extends Animal {
+            sound() {
+                return "Bow !! BOw!!";
+            }
+        }
+
+        class Cat extends Animal {
+            sound() {
+                return "Meow !! Meow!!";
+            }
+        }
+
+        var animal = new Animal();
+        var cat = new Cat();
+        var dog = new Dog();
+  
+        let myAnimals = [animal, dog, cat];
+
+        for (let i = 0; i < myAnimals.length; i++) {
+            document.write("<br>" + myAnimals[i].sound());
+        }
+
+    </script>
+</body>
+
+</html>

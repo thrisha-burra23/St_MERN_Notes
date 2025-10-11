@@ -1,0 +1,31 @@
+<html></html>
+<head>
+    <script>
+        // Login validation 
+        function loginValidataion() {
+                 
+            var uname = document.myform.username.value;
+                
+            var password = document.myform.password.value;
+            if (uname == null || uname == "") {
+                alert("Name Cant be blank : Please Enter Valid User ID :RAM");
+                return false;
+            } else if (password.length <6) {
+                alert(
+                    "Password must be at least 6 characters long");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>    
+    <form name="myform" action="LoginSuccess.html" onsubmit="return loginValidataion(this)">
+       <h1>Login Page :</h1>
+        User Name:   <input type="text" name="username">
+        <br> Password:<input type="password" name="password">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

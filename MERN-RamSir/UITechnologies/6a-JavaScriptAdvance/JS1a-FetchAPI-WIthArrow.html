@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Fetch API</title>
+    <script>
+    
+        const url = 'https://jsonplaceholder.typicode.com/posts';
+
+        
+        fetch(url)
+            
+            .then( (myres)=> {
+                
+                if (!myres.ok) {
+                    throw new Error('Error fetch data...');
+                }
+               
+                return myres.json();
+            })
+            
+            .then( (data)=> {
+               
+                console.log('Data from the API: ', data);
+            })
+           
+            .catch( (e)=> {
+                console.error("Hello error", e);
+            })
+    </script>
+</head>
+<body>
+    <h1>JS Fetch </h1>
+</body>
+
+</html>

@@ -224,12 +224,12 @@ header {
 }
 
 
-#intro .imgs .image-seq {
-  /* opacity: 0; */ */
+/* #intro .imgs .image-seq {
+  /* opacity: 0; */ 
   /* overflow: hidden; */
   /* animation: fadeIn 3s forwards infinite; */
   /* /* position: relative; */
-}
+/* } */
 
 /* .fade .delay-1 {
   animation-delay: 0s;
@@ -244,3 +244,80 @@ header {
     opacity: 1;
   }
 } */
+
+/* problem to solution */
+
+
+#pro-sol {
+  margin: 3rem 0;
+}
+#pro-sol h1{
+text-align: center;
+margin:3rem 0 ;
+font-size: 3rem;
+}
+
+
+
+#pro-sol .content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#pro-sol .content .problem{
+  border: 2px solid palevioletred;
+  background-color: rgb(252, 184, 207);
+  height: 30rem;
+  width:25rem;
+  text-align: center;
+  border-radius: 10%;
+}
+
+#pro-sol .content .problem .warning{
+  font-size: 48px;
+  color: orange;
+  display: inline-block;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#pro-sol .content .problem h2{
+  margin: 0.5rem 0;
+}
+
+#pro-sol .content .problem ul{
+  list-style-type: none;
+  padding: 1rem;
+}
+
+#pro-sol .content .problem ul li{
+  border: 2px solid palevioletred;
+  margin: 1rem;
+  padding: 0.5rem 0 0.4rem 0.6rem;
+  border-radius: 0.7rem;
+  text-align: left;
+  background-color: rgb(253, 164, 194);
+}
+
+
+#pro-sol .content .icon .icon-holder{
+  /* border: 2px solid black; */
+  height: 3rem;
+  width: 3rem;
+  font-size: 2rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgb(13, 244, 248);
+  animation:  bonce-book 1s linear infinite;
+}
+
+#pro-sol .content .icon .icon-holder .material-symbols-outlined {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+

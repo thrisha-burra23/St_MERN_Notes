@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  margin: 2rem 3rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 3rem;
+  position: fixed;
+  top: 0;
+  max-width: 100%;
+  width: 90%;
+  color: black;
+  font-size: larger;
+  /* flex-wrap: wrap; */
+  /* box-shadow: 0 0 3px 2px black; */
+  z-index: 1;
+}
+
+.logo img {
+  height: 3rem;
+  width: auto;
+  object-fit: contain;
+  /* border: 2px solid black; */
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+
+.links a {
+  /* border: 2px solid black; */
+  border-radius: 2rem;
+  margin: 0 0.5rem;
+  padding: 0.7rem;
+}
+
+.sign-in {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+
+.sign-in a {
+  margin: 0 0.2rem;
+  padding: 1rem;
+}
+
+ .sign-in #l1 {
+  /*border: 2px solid black; */
+  border-radius: 2rem;
+  padding: 0.5rem 1.9rem;
+  background: linear-gradient(to right, purple, blueviolet);
+  
+  color: white;
+}
+
+#l1:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* home section */
+
+
+/* icons */
+
+.material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+      font-size: 36px;
+      margin-right: 10px;
+      color: #333;
+    }
+
+#intro{
+    background-color: rgba(246, 226, 243, 0.5);
+    height: 80vh;
+    margin-top: 7rem ;
+    display: flex;
+    padding: 6rem 1rem;
+    border: 2px solid black;
+    gap: 30px;
+    /* margin-left: 30px; */
+    max-width: 100%;
+    
+}
+
+#intro  .content{
+    border: 2px solid black;
+    width: 50%;
+    padding:1rem;
+    position: relative;
+}
+
+#intro  .imgs{
+border: 2px solid black;
+width:40%;
+
+}
+#intro .book-icon{
+    font-size: 3.5rem;
+    margin-left: 3.5rem;
+    animation: bonce-book 1s linear infinite;
+}
+@keyframes bonce-book{
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+#intro .school-icon{
+    font-size: 3rem;    
+    position: absolute;
+    top: 10rem;
+    left: 5rem;
+    opacity: 0.5;
+    color: rgb(208, 162, 75);
+    animation: school-iconanimation 2s linear infinite;
+}
+@keyframes school-iconanimation{
+    0%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+
+}
+
+.home-textcontent{
+    width: 500px;
+    margin-left: 30px;
+}
+.home-textcontent h1{
+    font-size: 4rem;
+    margin-left: 30px; 
+    position: relative;   
+}
+.home-textcontent p{
+    font-size: 2rem;
+    font-style: italic;
+}
+.content #first-line{
+    margin-left: 3.5rem;
+    width: 50%;
+    background-color: white;
+    height: 15px;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+}

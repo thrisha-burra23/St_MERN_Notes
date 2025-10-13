@@ -60,12 +60,12 @@ header {
   padding: 1rem;
 }
 
- .sign-in #l1 {
+.sign-in #l1 {
   /*border: 2px solid black; */
   border-radius: 2rem;
   padding: 0.5rem 1.9rem;
   background: linear-gradient(to right, purple, blueviolet);
-  
+
   color: white;
 }
 
@@ -73,107 +73,174 @@ header {
   transform: scale(1.1);
 }
 
-
-
 /* home section */
 
-
-/* icons */
-
-.material-symbols-outlined {
-      font-family: 'Material Symbols Outlined';
-      font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48;
-      font-size: 36px;
-      margin-right: 10px;
-      color: #333;
-    }
-
-#intro{
-    background-color: rgba(246, 226, 243, 0.5);
-    height: 80vh;
-    margin-top: 7rem ;
-    display: flex;
-    padding: 6rem 1rem;
-    border: 2px solid black;
-    gap: 30px;
-    /* margin-left: 30px; */
-    max-width: 100%;
-    
+#intro {
+  background-color: rgba(246, 226, 243, 0.5);
+  height: 75vh;
+  margin-top: 5rem;
+  display: flex;
+  padding: 6rem 1rem;
+  /* border: 2px solid black; */
+  /* gap: 1.8px; */
+  max-width: 100%;
 }
 
-#intro  .content{
-    border: 2px solid black;
-    width: 50%;
-    padding:1rem;
-    position: relative;
+#intro .content {
+  /* border: 2px solid black; */
+  width: 50%;
+  padding: 1rem;
+  position: relative;
 }
 
-#intro  .imgs{
-border: 2px solid black;
-width:40%;
+#intro .imgs {
+  /* border: 2px solid black; */
+  width: 50%;
+  /* background-color: aliceblue; */
+}
+#intro .book-icon {
+  font-size: 3.5rem;
+  margin-left: 3.5rem;
+  animation: bonce-book 1s linear infinite;
+}
+@keyframes bonce-book {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+#intro .brain-icon {
+  font-size: 3rem;
+  position: absolute;
+  top: 10rem;
+  left: 5rem;
+  opacity: 0.5;
+  color: rgb(208, 162, 75);
+  animation: brain-iconanimation 2s linear infinite;
+}
+@keyframes brain-iconanimation {
+  0% {
+    transform: translateY(-1rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1rem);
+  }
+}
 
+.home-textcontent {
+  width: auto;
 }
-#intro .book-icon{
-    font-size: 3.5rem;
-    margin-left: 3.5rem;
-    animation: bonce-book 1s linear infinite;
+.home-textcontent h1 {
+  font-size: 4rem;
+  margin-left: 1rem;
+  position: relative;
 }
-@keyframes bonce-book{
-    0%{
-        transform: translateY(-10px);
-    }
-    50%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(10px);
-    }
+.home-textcontent p {
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 0.2rem;
 }
-#intro .school-icon{
-    font-size: 3rem;    
-    position: absolute;
-    top: 10rem;
-    left: 5rem;
-    opacity: 0.5;
-    color: rgb(208, 162, 75);
-    animation: school-iconanimation 2s linear infinite;
-}
-@keyframes school-iconanimation{
-    0%{
-        transform: translateY(-20px);
-    }
-    50%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(20px);
-    }
-
+.content #first-line {
+  margin-left: 3.9rem;
+  width: 50%;
+  background-color: white;
+  height: 1rem;
+  padding: 1rem;
+  border-radius: 50px;
+  text-align: center;
+  color: purple;
 }
 
-.home-textcontent{
-    width: 500px;
-    margin-left: 30px;
+#intro .first-line .school-icon {
+  position: absolute;
+  margin-left: 4rem;
+  margin-top: 0.5rem;
 }
-.home-textcontent h1{
-    font-size: 4rem;
-    margin-left: 30px; 
-    position: relative;   
+
+.intro-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1rem;
+  /* border: 2px solid black; */
 }
-.home-textcontent p{
-    font-size: 2rem;
-    font-style: italic;
+
+.intro-link .journey {
+  color: white;
+  background: linear-gradient(to right, purple, blueviolet);
+  border-radius: 2rem;
+  padding: 0.7rem 3rem;
+  font-size: large;
+  font-weight: 200;
 }
-.content #first-line{
-    margin-left: 3.5rem;
-    width: 50%;
-    background-color: white;
-    height: 15px;
-    padding: 10px;
-    border-radius: 50px;
-    text-align: center;
+
+.intro-link .courses {
+  border: 2px solid purple;
+  border-radius: 2rem;
+  color: purple;
+  padding: 0.7rem 3rem;
+  font-size: large;
+  font-weight: 200;
 }
+
+.intro-link .journey:hover {
+  transform: scale(1.1);
+}
+
+.intro-link .courses:hover {
+  background-color: purple;
+  color: white;
+}
+
+#intro .imgs .image {
+  height: 30rem;
+  width: 36rem;
+  /* border: 2px solid black; */
+  /* object-fit: ; */
+  padding: 1rem;
+  margin: 4rem 2rem 2rem 2rem;
+}
+
+#intro .imgs .image-seq img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10%;
+
+  margin-top: 4rem;
+  /* position: absolute;
+
+   top: 0;
+  left: 0;
+  width: 100%;
+  height: auto; */
+}
+
+
+#intro .imgs .image-seq {
+  /* opacity: 0; */ */
+  /* overflow: hidden; */
+  /* animation: fadeIn 3s forwards infinite; */
+  /* /* position: relative; */
+}
+
+/* .fade .delay-1 {
+  animation-delay: 0s;
+}
+
+.fade .delay-2 {
+  animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+} */

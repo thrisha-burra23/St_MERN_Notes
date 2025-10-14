@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -12,7 +13,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border: 2px solid black;
-  margin: 2rem 3rem;
+  margin: 2rem ;
   padding: 1rem;
   background-color: white;
   border-radius: 3rem;
@@ -21,10 +22,10 @@ header {
   max-width: 100%;
   width: 90%;
   color: black;
-  font-size: larger;
+  font-size: 1.2rem;
   /* flex-wrap: wrap; */
   /* box-shadow: 0 0 3px 2px black; */
-  z-index: 1;
+  z-index: 10;
 }
 
 .logo img {
@@ -39,13 +40,17 @@ header {
   justify-content: space-between;
   align-items: center;
   /* border: 2px solid black; */
+   flex-wrap: wrap;
 }
 
 .links a {
   /* border: 2px solid black; */
   border-radius: 2rem;
   margin: 0 0.5rem;
-  padding: 0.7rem;
+  padding: 0.7rem auto;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .sign-in {
@@ -53,11 +58,18 @@ header {
   justify-content: space-between;
   align-items: center;
   /* border: 2px solid black; */
+   flex-wrap: wrap;
 }
 
 .sign-in a {
   margin: 0 0.2rem;
-  padding: 1rem;
+  padding: 1rem auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  white-space: nowrap;
+
+
 }
 
 .sign-in #l1 {
@@ -73,14 +85,37 @@ header {
   transform: scale(1.1);
 }
 
+
+
+
+  /* Bottom nav (hidden by default) */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  justify-content: space-around;
+  padding: 0.7rem 0;
+  z-index: 9;
+}
+.bottom-nav a {
+  color: white;
+  font-size: 24px;
+}
+
+
+
+
+
 /* home section */
 
 #intro {
   background-color: rgba(246, 226, 243, 0.5);
-  height: 75vh;
-  margin-top: 5rem;
+  height: 80vh;
+  margin-top: 6rem;
   display: flex;
-  padding: 6rem 1rem;
+  padding: 3rem 1rem;
   /* border: 2px solid black; */
   /* gap: 1.8px; */
   max-width: 100%;
@@ -139,24 +174,30 @@ header {
   width: auto;
 }
 .home-textcontent h1 {
-  font-size: 4rem;
+  font-size: clamp(1.5rem, 6vw, 4rem);
+  text-align: center;
+
   margin-left: 1rem;
   position: relative;
 }
 .home-textcontent p {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  text-align: center;
+
   font-style: italic;
   letter-spacing: 0.2rem;
 }
 .content #first-line {
   margin-left: 3.9rem;
-  width: 50%;
+  width: 70%;
   background-color: white;
   height: 1rem;
   padding: 1rem;
   border-radius: 50px;
   text-align: center;
   color: purple;
+   font-size: clamp(0.9rem, 3vw, 1.1rem);
+
 }
 
 #intro .first-line .school-icon {
@@ -223,12 +264,11 @@ header {
   height: auto; */
 }
 
-
 /* #intro .imgs .image-seq {
-  /* opacity: 0; */ 
-  /* overflow: hidden; */
-  /* animation: fadeIn 3s forwards infinite; */
-  /* /* position: relative; */
+  /* opacity: 0; */
+/* overflow: hidden; */
+/* animation: fadeIn 3s forwards infinite; */
+/* /* position: relative; */
 /* } */
 
 /* .fade .delay-1 {
@@ -247,34 +287,31 @@ header {
 
 /* problem to solution */
 
-
 #pro-sol {
   margin: 3rem 0;
 }
-#pro-sol h1{
-text-align: center;
-margin:3rem 0 ;
-font-size: 3rem;
+#pro-sol h1 {
+  text-align: center;
+  margin: 3rem 0;
+  font-size: 3rem;
 }
 
-
-
-#pro-sol .content{
+#pro-sol .content {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-#pro-sol .content .problem{
+#pro-sol .content .problem {
   border: 2px solid palevioletred;
   background-color: rgb(252, 184, 207);
   height: 30rem;
-  width:25rem;
+  width: 25rem;
   text-align: center;
   border-radius: 10%;
 }
 
-#pro-sol .content .problem .warning{
+#pro-sol .content .problem .warning {
   font-size: 48px;
   color: orange;
   display: inline-block;
@@ -282,16 +319,16 @@ font-size: 3rem;
   padding: 1rem 0;
 }
 
-#pro-sol .content .problem h2{
+#pro-sol .content .problem h2 {
   margin: 0.5rem 0;
 }
 
-#pro-sol .content .problem ul{
+#pro-sol .content .problem ul {
   list-style-type: none;
   padding: 1rem;
 }
 
-#pro-sol .content .problem ul li{
+#pro-sol .content .problem ul li {
   border: 2px solid palevioletred;
   margin: 1rem;
   padding: 0.5rem 0 0.4rem 0.6rem;
@@ -300,8 +337,7 @@ font-size: 3rem;
   background-color: rgb(253, 164, 194);
 }
 
-
-#pro-sol .content .icon .icon-holder{
+#pro-sol .content .icon .icon-holder {
   /* border: 2px solid black; */
   height: 3rem;
   width: 3rem;
@@ -312,7 +348,7 @@ font-size: 3rem;
   align-items: center;
   overflow: hidden;
   background-color: rgb(13, 244, 248);
-  animation:  bonce-book 1s linear infinite;
+  animation: bonce-book 1s linear infinite;
 }
 
 #pro-sol .content .icon .icon-holder .material-symbols-outlined {
@@ -320,4 +356,75 @@ font-size: 3rem;
   line-height: 1;
 }
 
+/* courses section */
 
+#courses h1 {
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+  font-size: 3rem;
+}
+
+#courses p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#courses button {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 9rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(241, 106, 11);
+  color: rgb(241, 106, 11);
+  background-color: rgba(255, 210, 119, 0.4);
+}
+
+ #courses .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+
+ /* #courses .card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+ 
+ #courses .card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+ 
+ #courses .card p {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+ 
+ #courses .card .card-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+ 
+ #courses .card .card-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #6200ea;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+ */

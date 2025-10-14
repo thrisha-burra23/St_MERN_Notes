@@ -1,0 +1,62 @@
+@media screen and (max-width: 858px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .links {
+    display: none;
+  }
+  .bottom-nav {
+    display: flex;
+  }
+
+  #intro {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  #intro .content,
+  #intro .imgs {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .home-textcontent h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    text-align: center;
+  }
+
+  .home-textcontent p {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    text-align: center;
+  }
+
+  .content #first-line {
+    width: 90%;
+    margin: 1rem auto;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .intro-link {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .intro-link .journey,
+  .intro-link .courses {
+    width: 80%;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+  }
+
+  .brain-icon {
+    position: static;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .book-icon {
+    margin: 0 auto;
+    display: block;
+  }
+}

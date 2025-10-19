@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Lesson 1</title>
+    <style>
+        .highlight{
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="fruits">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+    <li>Dragonfruit</li>
+  </ul>
+
+    <div id="container">
+        <h1>Hello<span>World</span></h1>
+        <p>This is a <strong>test</strong> paragraph.</p>
+    </div>
+
+    <script>
+        const container = document.getElementById("container");
+
+        console.log("childNodes:", container.childNodes);//all nodes including texts and hidden tags
+        console.log("children:", container.children);// only the visible tags
+
+        console.log("firstChild:", container.firstChild); //text
+        console.log("firstElementChild:", container.firstElementChild);//<h1>Hello <span>World</span></h1>
+
+        console.log("Text content of first element child:", container.firstElementChild.textContent);//Hello World
+
+
+        const list=document.getElementById("fruits");
+        console.log(list);
+
+        const secondItem=list.children[1];
+        console.log(secondItem);
+
+        console.log(secondItem.parentElement)
+        console.log(secondItem.parentNode)
+
+        console.log(secondItem.nextElementSibling)
+        console.log(secondItem.nextSibling)
+
+        console.log(secondItem.previousElementSibling)
+
+        console.log(list.firstChild)
+        console.log(list.firstElementChild)
+
+        console.log(list.lastElementChild.textContent)
+
+        for(let i=0;i<list.children.length;i++){
+            console.log(list.children[i].textContent)
+
+            if(i==list.children.length-1){
+                list.children[i].classList.add("highlight")
+
+                list.children[i].previousElementSibling.classList.add("highlight")
+            }
+        }
+
+        console.log(list.children.length)
+    </script>
+</body>
+
+</html>

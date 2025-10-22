@@ -5,24 +5,32 @@
     <meta charset="UTF-8">
     <title>DOM Lesson 1</title>
     <style>
-        .highlight{
+        .highlight {
             background-color: yellow;
+        }
+
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 
 <body>
     <ul id="fruits">
-    <li>Apple</li>
-    <li>Banana</li>
-    <li>Cherry</li>
-    <li>Dragonfruit</li>
-  </ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Dragonfruit</li>
+    </ul>
 
     <div id="container">
         <h1>Hello<span>World</span></h1>
         <p>This is a <strong>test</strong> paragraph.</p>
     </div>
+
+    <img id="image" src="https://wallpapercave.com/wp/CcV4UhO.jpg" alt="placeholder" data-author="OpenAI">
+
+    <button id="change">Change Image</button>
 
     <script>
         const container = document.getElementById("container");
@@ -36,10 +44,10 @@
         console.log("Text content of first element child:", container.firstElementChild.textContent);//Hello World
 
 
-        const list=document.getElementById("fruits");
+        const list = document.getElementById("fruits");
         console.log(list);
 
-        const secondItem=list.children[1];
+        const secondItem = list.children[1];
         console.log(secondItem);
 
         console.log(secondItem.parentElement)
@@ -55,10 +63,10 @@
 
         console.log(list.lastElementChild.textContent)
 
-        for(let i=0;i<list.children.length;i++){
+        for (let i = 0; i < list.children.length; i++) {
             console.log(list.children[i].textContent)
 
-            if(i==list.children.length-1){
+            if (i == list.children.length - 1) {
                 list.children[i].classList.add("highlight")
 
                 list.children[i].previousElementSibling.classList.add("highlight")
@@ -66,6 +74,19 @@
         }
 
         console.log(list.children.length)
+
+        const img = document.getElementById("image")
+        const button = document.getElementById("change")
+
+        //modifying imgs when clicked
+
+        button.addEventListener("click", () => {
+            img.setAttribute("src", "https://i.pinimg.com/736x/d6/1f/44/d61f445f3ca87b83251eeb8e08e653db.jpg")
+            img.setAttribute("alt", "img changed")
+            const isHidden = img.classList.toggle("hidden")
+            button.textContent = isHidden ? "Show Image" : "Hide Image";
+        })
+
     </script>
 </body>
 

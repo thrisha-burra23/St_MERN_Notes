@@ -1,0 +1,11 @@
+.productItem{
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.productList{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

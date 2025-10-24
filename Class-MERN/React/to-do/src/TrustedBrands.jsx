@@ -1,9 +1,11 @@
+
 function TrustedBrands(props){
     return (
         <div className="flex-col items-start">
             <h1 className="font-semibold text-xl">
                 Trusted Brands
             </h1>
+             <div className="p-8 flex items-center gap-6">
             {
                 props.trustedBrands.map((brand)=>{
                     return(
@@ -13,6 +15,7 @@ function TrustedBrands(props){
                     )
                 })
             }
+            </div> 
 
         </div>
     )

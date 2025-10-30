@@ -1,5 +1,21 @@
 
 function TrustedBrands(props){
+
+
+    //const trustedBrands = [
+   // {
+  //     id: 1,
+  //     logo: "st",
+  //   },
+  //   {
+  //     id: 2,
+  //     logo: "ryzer",
+  //   },
+  //   {
+  //     id: 3,
+  //     logo: "google",
+  //   },
+  // ];
     return (
         <div className="flex-col items-start">
             <h1 className="font-semibold text-xl">

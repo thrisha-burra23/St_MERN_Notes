@@ -4,7 +4,8 @@ function StatusView({ status, data }) {
     idle:    <p>Idle</p>,
     loading: <p>Loading...</p>,
     error:   <p style={{color:'red'}}>Failed</p>,
-    ready:   <div>{data}</div>
+    ready:   <div>{data}</div>,
+    empty:  <p>Data is empty</p>
   };
 
   // pick the view by key; fallback to null if unknown

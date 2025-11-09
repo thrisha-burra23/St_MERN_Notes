@@ -3,7 +3,7 @@ import { useFetch } from "../../hooks/useFetch";
 import Button from "../../UI/Button";
 
 const TvMazeAPI = () => {
-  const [query, setQuery] = useState("office");
+  const [query, setQuery] = useState("");
   const [search, setSearch] = useState(query);
   const url = `https://api.tvmaze.com/search/shows?q=${search}`;
   const { loading, error, data } = useFetch(url);

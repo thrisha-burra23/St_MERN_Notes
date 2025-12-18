@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Invoice Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section class="inputContainer">
+            <div class="ip">
+                <label for="item">Item Name</label>
+                <input type="text" id="item">
+            </div>
+            <div class="ip">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity">
+            </div>
+            <div class="ip">
+                <label for="price">Price per unit</label>
+                <input type="number" id="price">
+            </div>
+            <button onclick="handleAddItem()">Add Item</button>
+        </section>
+        <section class=" itemsContainer">
+            <table  id="table" class="table" >              
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>               
+            </table>
+        </section>
+    </main>
+
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

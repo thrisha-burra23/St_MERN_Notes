@@ -1,0 +1,16 @@
+{
+  "name": "todo-vite-app",
+  "version": "1.0.0",
+  "description": "Todo app using vite javaScript modular frontend with appwrite backend",
+  "scripts": {
+    "dev": "vite dev"
+  },
+  "author": "thrisha",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^7.2.6"
+  },
+  "dependencies": {
+    "appwrite": "^21.4.0"
+  }
+}

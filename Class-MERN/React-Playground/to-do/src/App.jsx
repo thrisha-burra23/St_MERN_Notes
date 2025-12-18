@@ -11,10 +11,13 @@ import TvMazeAPI from "./Assignments/CustomHooks/TvMazeAPI";
 import ResponsiveBox from "./components/custom-hooks/ResponsiveBox";
 import UsersWithRetry from "./Assignments/conditional-rendering-and-api-states-react/7-RobustTraidWithRetry/UsersWithRetry";
 import DymanicFetching from "./Assignments/conditional-rendering-and-api-states-react/7-RobustTraidWithRetry/DynamicFetching";
+import UserCard from "./Assignments/conditional-rendering-and-api-states-react/9-ChoosingRightPattern/UserCard";
+import HomePage from "./InstaPost/pages/HomePage.jsx";
+import TimerApp from "./components/classComponents/TimerApp.jsx"
 
 const App = () => {
  
-  return <DymanicFetching/>
+  return <TimerApp/>
 };
 
 export default App;

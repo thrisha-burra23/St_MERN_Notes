@@ -1,0 +1,106 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Todo container */
+#todo-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#todo-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+#add-btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#add-btn:hover {
+  background: #0056b3;
+}
+
+/* Todo list styling */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+  width: 400px;
+}
+
+#todo-list li {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Text and date */
+#todo-list li p {
+  margin: 0;
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+#todo-list li span {
+  display: block;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Buttons */
+#delbtn, #editbtn {
+  padding: 6px 10px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#delbtn {
+  background: #dc3545;
+  color: white;
+}
+
+#delbtn:hover {
+  background: #a71d2a;
+}
+
+#editbtn {
+  background: #ffc107;
+  color: black;
+}
+
+#editbtn:hover {
+  background: #e0a800;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}

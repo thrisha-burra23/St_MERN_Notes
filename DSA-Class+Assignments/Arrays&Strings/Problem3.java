@@ -5,7 +5,7 @@ class Problem3{
         System.out.println("content of the array ");
         for(int i=arr.length-1;i>=0;i--){
             System.out.println("Value at arr["+i+"]="+arr[i]);
-        }
+        }  
 
     }
 }

@@ -13,11 +13,13 @@ import UsersWithRetry from "./Assignments/conditional-rendering-and-api-states-r
 import DymanicFetching from "./Assignments/conditional-rendering-and-api-states-react/7-RobustTraidWithRetry/DynamicFetching";
 import UserCard from "./Assignments/conditional-rendering-and-api-states-react/9-ChoosingRightPattern/UserCard";
 import HomePage from "./InstaPost/pages/HomePage.jsx";
-import TimerApp from "./components/classComponents/TimerApp.jsx"
+//import TimerApp from "./components/classComponents/TimerApp.jsx"
+import Orders from "./useMemo/orders.jsx";
+import WeatherSkeleton from "./loading skeleton/WeatherSkeleton.jsx";
 
 const App = () => {
  
-  return <TimerApp/>
+  return <WeatherSkeleton/>
 };
 
 export default App;

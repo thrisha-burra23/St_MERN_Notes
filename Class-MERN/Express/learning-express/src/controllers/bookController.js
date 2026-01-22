@@ -11,7 +11,7 @@ async function createNewBook(req,res){
             throw new Error("Already book exists with this title");
         }
 
-       const newBook=mongoose.createConnection(newBookData) 
+       const newBook= await Book.create(newBookData) 
        if(!newBook._id){
         throw new Error("Book has not been saved to DB")
        }

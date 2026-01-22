@@ -8,4 +8,4 @@ const createBookSchema = z.object({
     genre: z.string().min(3, "Genre should contain 3 letters").max(10, "Genre must be less than 10 letters.")
 })
 
-export {createBookSchema}
+export {createBookSchema} 

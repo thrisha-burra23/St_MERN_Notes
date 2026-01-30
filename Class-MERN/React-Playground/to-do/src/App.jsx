@@ -16,10 +16,11 @@ import HomePage from "./InstaPost/pages/HomePage.jsx";
 //import TimerApp from "./components/classComponents/TimerApp.jsx"
 import Orders from "./useMemo/orders.jsx";
 import WeatherSkeleton from "./loading skeleton/WeatherSkeleton.jsx";
+import FE_BE_Connection from "./FE_BE_Connection.jsx";
 
 const App = () => {
  
-  return <WeatherSkeleton/>
+  return <FE_BE_Connection/>
 };
 
 export default App;

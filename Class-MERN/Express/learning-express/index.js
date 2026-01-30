@@ -1,27 +1,58 @@
-import express from "express"
-
-import connectToDb from "./src/config/mongo-db.js";
-import { userRouter } from "./src/routes/userRouter.js";
-import bookRouter from "./src/routes/bookRouter.js";
-const PORT = 3000
+import express from "express";
+import connectMongoDb from "./config/mongo-db.js";
+import userRouter from "./routes/userRoute.js";
+import bookRouter from "./routes/bookRoute.js";
+import cors from "cors";
+import cookieParser from "cookie-parser";
 
 const app = express();
+app.use(express.json());
+app.use(cookieParser());
 
-app.use(express.json())
+const allowedOrigins = [
+  "http://localhost:5173",
+//   "https://sundeeep.vercel.app"
+];
 
-app.use("/user",userRouter)
-app.use("/book",bookRouter)
+// CORS options
+ const corsOptions = {
+  origin: (origin, callback) => {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
+};
 
-async function connectBackend()
-{
-    await connectToDb();
-    serverHttpStart();
+app.use(cors(corsOptions));
+
+app.post("/testing", (req, res) => {
+    res.status(200).json({
+        message: "/testing route has been hit successfully!",
+        data: req.body,
+        cookies: req.cookies
+    })
+})
+
+// app.use("/demo", demoRouter)
+app.use("/users", userRouter)
+app.use("/books", bookRouter)
+
+const PORT = 8000;
+
+async function startBackendApplication(){
+    await connectMongoDb();
+    startHttpServer()
 }
 
-function serverHttpStart() {
-    app.listen(PORT, () => {       
-        console.log("server is running")
-        console.log(`http://localhost:${PORT}`)
-    });
-} 
-connectBackend();
+
+function startHttpServer(){
+    app.listen(PORT, async() => {
+            console.log("Server is running!")
+    })
+}
+
+
+startBackendApplication();
